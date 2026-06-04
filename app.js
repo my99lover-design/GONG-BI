@@ -246,8 +246,6 @@ ${gateInfo[apartment]
 Object.entries(data.lines)
 .forEach(([line,passwords])=>{
 
-    if(line === "undefined") return;
-
         html += `
 
         <div class="lineBox">
