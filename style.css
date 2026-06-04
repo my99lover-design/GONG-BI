@@ -20,15 +20,15 @@ h1{
 
 button{
 
-    width:100%;
+    width:95%;
 
-    max-width:600px;
+    max-width:none;
 
-    height:120px;
+    height:140px;
 
-    margin:12px;
+    margin:15px auto;
 
-    font-size:36px;
+    font-size:42px;
 
     font-weight:bold;
 
@@ -40,7 +40,7 @@ button{
 
     color:white;
 
-    cursor:pointer;
+    display:block;
 }
 
 /* 홈, 뒤로가기 버튼 */
