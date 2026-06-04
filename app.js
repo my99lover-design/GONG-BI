@@ -1,3 +1,32 @@
+const gateInfo = {
+
+    "골든루체뷰1":[
+        "1~14호 → 닥엔돈스 옆문",
+        "15~28호 → 닥엔돈스 맞은편"
+    ],
+
+    "럭스A":[
+        "1~38호, 87~90호 → 1게이트 (쓰레기장쪽)",
+        "49~67호 → 2게이트 (CU와 비타민부동산 사이)",
+        "39~48호, 68~86호 → 3게이트 (지하주차장 옆)"
+    ],
+
+    "럭스B":[
+        "1~20호, 47~50호 → 1게이트 (지하주차장 옆)",
+        "21~46호 → 2게이트 (어린왕자 조형물 오른쪽 뒤 골목)"
+    ],
+
+    "썬앤빌":[
+        "A1~26, A85~100 → A1게이트",
+        "A27~49, A72~84 → A2게이트",
+        "A50~71, B93~104 → A3게이트",
+        "B1~10, B79~92, B105~114 → B1게이트",
+        "B11~32, B66~78 → B2게이트",
+        "B33~65 → B3게이트"
+    ]
+
+};
+
 window.onload = function(){
 
     showRegions();
@@ -188,10 +217,36 @@ function showPassword(
 
     </p>
 
+    ${
+gateInfo[apartment]
+?
+
+`
+<div class="lineBox">
+
+<h4>
+게이트 안내
+</h4>
+
+${gateInfo[apartment]
+.map(info => `<div>${info}</div>`)
+.join("")}
+
+</div>
+`
+
+:
+
+""
+
+}
+
     `;
 
-    Object.entries(data.lines)
-    .forEach(([line,passwords])=>{
+Object.entries(data.lines)
+.forEach(([line,passwords])=>{
+
+    if(line === "undefined") return;
 
         html += `
 
