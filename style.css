@@ -20,13 +20,9 @@ h1{
 
 button{
 
-    width:95%;
-
-    max-width:none;
+    width:100%;
 
     height:100px;
-
-    margin:10px auto;
 
     font-size:30px;
 
@@ -41,8 +37,6 @@ button{
     color:white;
 
     cursor:pointer;
-
-    display:block;
 }
 
 /* 홈 / 뒤로가기 */
@@ -63,7 +57,54 @@ button{
     margin:15px 0;
 }
 
-/* 비밀번호 전체 박스 */
+/* 지역 선택 (2열) */
+
+.buttonGrid2{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+/* 아파트 / 동 선택 (3열) */
+
+.buttonGrid3{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr 1fr;
+
+    gap:10px;
+
+    margin-top:10px;
+}
+
+/* Grid 내부 버튼 */
+
+.buttonGrid2 button,
+.buttonGrid3 button{
+
+    width:100%;
+
+    max-width:none;
+
+    margin:0;
+}
+
+/* 동 버튼은 조금 작게 */
+
+.buttonGrid3 button{
+
+    height:80px;
+
+    font-size:26px;
+}
+
+/* 비밀번호 박스 */
 
 .passwordBox{
 
