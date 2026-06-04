@@ -91,7 +91,7 @@ function showDongs(region, apartment){
 
     </button>
 
-    <div class="path">
+  <div class="path">
 
 ${region}
 >
@@ -111,7 +111,6 @@ ${getCommonPassword(region, apartment)}
 </div>
 
 <div class="buttonGrid3">
-
     `;
 
     Object.keys(
@@ -190,8 +189,8 @@ function showPassword(
 
     `;
 
-Object.entries(data.lines)
-.forEach(([line,passwords])=>{
+    Object.entries(data.lines)
+    .forEach(([line,passwords])=>{
 
         html += `
 
