@@ -11,26 +11,30 @@ body{
 
 h1{
 
-    margin-bottom:20px;
+    font-size:48px;
+
+    margin-bottom:30px;
 }
+
+/* 기본 버튼 */
 
 button{
 
     width:100%;
 
-    max-width:400px;
+    max-width:600px;
 
-    height:70px;
+    height:120px;
 
-    margin:8px;
+    margin:12px;
 
-    font-size:22px;
+    font-size:36px;
 
     font-weight:bold;
 
     border:none;
 
-    border-radius:12px;
+    border-radius:20px;
 
     background:#4285f4;
 
@@ -39,45 +43,81 @@ button{
     cursor:pointer;
 }
 
-button:hover{
-
-    opacity:0.9;
-}
+/* 홈, 뒤로가기 버튼 */
 
 .navBtn{
 
     background:#666;
 }
 
+/* 선택 경로 */
+
+.path{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    margin:20px 0;
+}
+
+/* 비밀번호 전체 박스 */
+
 .passwordBox{
 
     background:white;
 
-    padding:20px;
+    padding:30px;
 
-    border-radius:12px;
+    border-radius:15px;
 
     margin-top:20px;
 
     text-align:left;
+
+    font-size:30px;
+
+    line-height:1.8;
 }
+
+/* 아파트명 */
+
+.passwordBox h2{
+
+    font-size:48px;
+
+    margin-bottom:10px;
+}
+
+/* 동 */
+
+.passwordBox h3{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+/* 라인 제목 */
+
+.passwordBox h4{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+}
+
+/* 라인별 비밀번호 박스 */
 
 .lineBox{
 
-    border:1px solid #ddd;
+    border:2px solid #ddd;
 
-    padding:10px;
+    padding:20px;
 
-    margin-top:10px;
+    margin-top:15px;
 
-    border-radius:8px;
-}
+    border-radius:12px;
 
-.path{
-
-    font-size:18px;
-
-    font-weight:bold;
-
-    margin-bottom:15px;
+    font-size:30px;
 }
