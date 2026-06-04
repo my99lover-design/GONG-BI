@@ -1,4 +1,6 @@
-const gateInfo = {
+window.onload = function(){
+
+    const gateInfo = {
 
     "골든루체뷰1":[
         "1~14호 → 닥엔돈스 옆문",
@@ -26,8 +28,6 @@ const gateInfo = {
     ]
 
 };
-
-window.onload = function(){
 
     showRegions();
 
