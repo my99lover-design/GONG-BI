@@ -6,7 +6,9 @@ window.onload = function(){
 
 function showRegions(){
 
-    let html = "";
+    let html = `
+    <div class="buttonGrid2">
+    `;
 
     Object.keys(apartmentData)
     .forEach(region=>{
@@ -21,6 +23,10 @@ function showRegions(){
         `;
 
     });
+
+    html += `
+    </div>
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -43,6 +49,8 @@ function showApartments(region){
     ${region}
     </div>
 
+    <div class="buttonGrid3">
+
     `;
 
     Object.keys(apartmentData[region])
@@ -61,6 +69,10 @@ function showApartments(region){
         `;
 
     });
+
+    html += `
+    </div>
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -87,6 +99,8 @@ function showDongs(region, apartment){
 
     </div>
 
+    <div class="buttonGrid3">
+
     `;
 
     Object.keys(
@@ -108,6 +122,10 @@ function showDongs(region, apartment){
         `;
 
     });
+
+    html += `
+    </div>
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -181,11 +199,13 @@ function showPassword(
             ${password}
             </div>
             `;
+
         });
 
         html += `
         </div>
         `;
+
     });
 
     html += `
