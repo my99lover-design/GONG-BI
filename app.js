@@ -102,7 +102,7 @@ function showDongs(region, apartment){
         '${dong}'
         )">
 
-        ${dong}동
+        ${dong}
 
         </button>
         `;
@@ -142,7 +142,7 @@ function showPassword(
     >
     ${apartment}
     >
-    ${dong}동
+    ${dong}
 
     </div>
 
@@ -150,7 +150,7 @@ function showPassword(
 
     <h2>${apartment}</h2>
 
-    <h3>${dong}동</h3>
+    <h3>${dong}</h3>
 
     <p>
 
