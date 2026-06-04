@@ -62,7 +62,7 @@ const apartmentData = {
         },
         "리슈빌": {
             "201": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2": [
                         "#1701#7817#"
@@ -76,7 +76,7 @@ const apartmentData = {
                 }
             },
             "202": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2,3": [
                         "#802#1231#",
@@ -88,7 +88,7 @@ const apartmentData = {
                 }
             },
             "203": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2,3": [
                         "#401#1111#",
@@ -100,7 +100,7 @@ const apartmentData = {
                 }
             },
             "204": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2,3": [
                         "#503#1234#",
@@ -117,7 +117,7 @@ const apartmentData = {
                 }
             },
             "205": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2,3": [
                         "#1602#6263#",
@@ -130,7 +130,7 @@ const apartmentData = {
                 }
             },
             "206": {
-                "common": "x",
+                "common": "##0572",
                 "lines": {
                     "1,2,3": [
                         "#1803#1111#",
