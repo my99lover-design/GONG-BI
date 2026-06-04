@@ -197,7 +197,7 @@ function showPassword(
         <div class="lineBox">
 
         <h4>
-        ${line}라인
+        ${line}
         </h4>
 
         `;
