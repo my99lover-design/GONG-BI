@@ -1574,7 +1574,7 @@ const apartmentData = {
         },
         "LH2": {
             "201": {
-                "common": "10#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "1413#9999",
@@ -1585,7 +1585,7 @@ const apartmentData = {
                 }
             },
             "202": {
-                "common": "10#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "813#4321",
@@ -1599,7 +1599,7 @@ const apartmentData = {
                 }
             },
             "203": {
-                "common": "20#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "1608#9999",
@@ -1614,7 +1614,7 @@ const apartmentData = {
                 }
             },
             "204": {
-                "common": "20#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "408#1234",
@@ -1627,7 +1627,7 @@ const apartmentData = {
                 }
             },
             "205": {
-                "common": "20#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "607#9999",
@@ -1638,7 +1638,7 @@ const apartmentData = {
                 }
             },
             "206": {
-                "common": "10#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "202#0000",
@@ -1652,7 +1652,7 @@ const apartmentData = {
                 }
             },
             "207": {
-                "common": "10#5640",
+                "common": "201/2/6/7동 -> 10#5640 , 203/4/5동 ->20#5640",
                 "lines": {
                     "undefined": [
                         "608#0000",
@@ -1669,89 +1669,78 @@ const apartmentData = {
         },
         "먹자오피": {
             "안강": {
-                "common": "7627",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "7627"
                     ]
                 }
             },
             "엘리츠": {
-                "common": "1932",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1932"
                     ]
                 }
             },
             "월드퍼스티": {
-                "common": "3033",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "3033"
                     ]
                 }
             },
             "유일": {
-                "common": "##2580",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "##2580"
                     ]
                 }
             },
             "이편한": {
-                "common": "##0102",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "##0102"
                     ]
                 }
             },
             "중일": {
-                "common": "#*4926#",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "#*4926#"
                     ]
                 }
             },
             "태림1": {
-                "common": "1234",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1234"
                     ]
                 }
             },
             "태림2": {
-                "common": "1234",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1234"
                     ]
                 }
             },
             "트루엘": {
-                "common": "##2580",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "##2580"
                     ]
                 }
             },
             "헤르메스": {
-                "common": "7070",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "7070"
                     ]
                 }
             },
             "NK": {
-                "common": "3644",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "3644"
                     ]
                 }
@@ -1759,121 +1748,106 @@ const apartmentData = {
         },
         "길건너오피": {
             "골든루체뷰1": {
-                "common": "#2580",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "#2580"
                     ]
                 }
             },
             "노블팰리스": {
-                "common": "#3621#",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "#3621#"
                     ]
                 }
             },
             "더끌리움": {
-                "common": "9999",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "9999"
                     ]
                 }
             },
             "럭스A": {
-                "common": "5478",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "5478"
                     ]
                 }
             },
             "럭스B": {
-                "common": "0416",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "0416"
                     ]
                 }
             },
             "럭스C": {
-                "common": "1440",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1440"
                     ]
                 }
             },
             "럭스D": {
-                "common": "1440",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1440"
                     ]
                 }
             },
             "스위트엠1": {
-                "common": "7777",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "7777"
                     ]
                 }
             },
             "스위트엠2": {
-                "common": "7777",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "7777"
                     ]
                 }
             },
             "스위트엠3": {
-                "common": "9999",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "9999"
                     ]
                 }
             },
             "스위트엠R": {
-                "common": "9999",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "9999"
                     ]
                 }
             },
             "썬앤빌": {
-                "common": "9999",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "9999"
                     ]
                 }
             },
             "원폴리오": {
-                "common": "9999",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "9999"
                     ]
                 }
             },
             "하우스디": {
-                "common": "##2580",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "##2580"
                     ]
                 }
             },
             "휴트라움": {
-                "common": "1234",
                 "lines": {
-                    "undefined": [
+                    "-": [
                         "1234"
                     ]
                 }
