@@ -93,13 +93,24 @@ function showDongs(region, apartment){
 
     <div class="path">
 
-    ${region}
-    >
-    ${apartment}
+${region}
+>
+${apartment}
 
-    </div>
+</div>
 
-    <div class="buttonGrid3">
+<div class="passwordBox">
+
+<h3>
+
+공동비밀번호 :
+${getCommonPassword(region, apartment)}
+
+</h3>
+
+</div>
+
+<div class="buttonGrid3">
 
     `;
 
@@ -214,5 +225,23 @@ function showPassword(
 
     document.getElementById("screen")
     .innerHTML = html;
+
+}
+
+function getCommonPassword(
+    region,
+    apartment
+){
+
+    const firstDong =
+    Object.keys(
+        apartmentData[region][apartment]
+    )[0];
+
+    return apartmentData
+    [region]
+    [apartment]
+    [firstDong]
+    .common;
 
 }
