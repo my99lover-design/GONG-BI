@@ -43,11 +43,8 @@ function showRegions(){
     .forEach(region=>{
 
         html += `
-        <button
-        onclick="showApartments('${region}')">
-
+        <button onclick="showApartments('${region}')">
         ${region}
-
         </button>
         `;
 
@@ -57,8 +54,7 @@ function showRegions(){
     </div>
     `;
 
-    document.getElementById("screen")
-    .innerHTML = html;
+    document.getElementById("screen").innerHTML = html;
 
 }
 
@@ -103,12 +99,21 @@ function showApartments(region){
     </div>
     `;
 
-    document.getElementById("screen")
-    .innerHTML = html;
+    document.getElementById("screen").innerHTML = html;
 
 }
 
 function showDongs(region, apartment){
+
+    const aptData = apartmentData[region][apartment];
+
+    if(aptData.lines){
+
+        showOfficetel(region, apartment);
+
+        return;
+
+    }
 
     let html = `
 
@@ -171,9 +176,7 @@ function showDongs(region, apartment){
 
     `;
 
-    Object.keys(
-        apartmentData[region][apartment]
-    )
+    Object.keys(apartmentData[region][apartment])
     .forEach(dong=>{
 
         html += `
@@ -195,8 +198,78 @@ function showDongs(region, apartment){
     </div>
     `;
 
-    document.getElementById("screen")
-    .innerHTML = html;
+    document.getElementById("screen").innerHTML = html;
+
+}
+
+function showOfficetel(region, apartment){
+
+    const password =
+    apartmentData[region][apartment]
+    .lines["-"][0];
+
+    let html = `
+
+    <button
+    class="navBtn"
+    onclick="showApartments('${region}')">
+
+    ← 뒤로
+
+    </button>
+
+    <div class="path">
+
+    ${region}
+    >
+    길건너오피
+    >
+    ${apartment}
+
+    </div>
+
+    <div class="passwordBox">
+
+    <h2>${apartment}</h2>
+
+    <h3>
+
+    공동비밀번호 :
+    ${password}
+
+    </h3>
+
+    `;
+
+    if(gateInfo[apartment]){
+
+        html += `
+
+        <div class="lineBox">
+
+        <h4>게이트 안내</h4>
+
+        `;
+
+        gateInfo[apartment].forEach(info=>{
+
+            html += `
+            <div>${info}</div>
+            `;
+
+        });
+
+        html += `
+        </div>
+        `;
+
+    }
+
+    html += `
+    </div>
+    `;
+
+    document.getElementById("screen").innerHTML = html;
 
 }
 
@@ -280,8 +353,7 @@ function showPassword(
     </div>
     `;
 
-    document.getElementById("screen")
-    .innerHTML = html;
+    document.getElementById("screen").innerHTML = html;
 
 }
 
