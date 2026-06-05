@@ -216,12 +216,16 @@ onclick="showDongs(
 
     <h3>${dong}</h3>
 
-    <p>
+    if(data.common){
 
+    html += `
+    <p>
     공동비밀번호 :
     ${data.common}
-
     </p>
+    `;
+
+}
 
     `;
 
@@ -236,9 +240,15 @@ onclick="showDongs(
     if(line !== "-"){
 
         html += `
-        <h4>
-        ${line}라인
-        </h4>
+       if(line !== "-"){
+
+    html += `
+    <h4>
+    ${line}라인
+    </h4>
+    `;
+
+}
         `;
 
     }
