@@ -83,13 +83,25 @@ function showDongs(region, apartment){
 
     let html = `
 
-    <button
-    class="navBtn"
-    onclick="showApartments('${region}')">
+    <div class="topButtons">
 
-    ← 뒤로
+<button
+class="navBtn"
+onclick="showRegions()">
 
-    </button>
+🏠 홈
+
+</button>
+
+<button
+class="navBtn"
+onclick="showApartments('${region}')">
+
+← 뒤로
+
+</button>
+
+</div>
 
     <div class="path">
 
@@ -154,16 +166,28 @@ function showPassword(
 
     let html = `
 
-    <button
-    class="navBtn"
-    onclick="showDongs(
-    '${region}',
-    '${apartment}'
-    )">
+    <div class="topButtons">
 
-    ← 뒤로
+<button
+class="navBtn"
+onclick="showRegions()">
 
-    </button>
+🏠 홈
+
+</button>
+
+<button
+class="navBtn"
+onclick="showDongs(
+'${region}',
+'${apartment}'
+)">
+
+← 뒤로
+
+</button>
+
+</div>
 
     <div class="path">
 
