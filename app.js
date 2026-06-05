@@ -1,32 +1,3 @@
-const gateInfo = {
-
-    "골든루체뷰1":[
-        "1~14호 → 닥엔돈스 옆문",
-        "15~28호 → 닥엔돈스 맞은편"
-    ],
-
-    "럭스A":[
-        "1~38호, 87~90호 → 1게이트 (쓰레기장쪽)",
-        "49~67호 → 2게이트 (CU와 비타민부동산 사이)",
-        "39~48호, 68~86호 → 3게이트 (지하주차장 옆)"
-    ],
-
-    "럭스B":[
-        "1~20호, 47~50호 → 1게이트 (지하주차장 옆)",
-        "21~46호 → 2게이트 (어린왕자 조형물 오른쪽 뒤 골목)"
-    ],
-
-    "썬앤빌":[
-        "A1~26, A85~100 → A1게이트",
-        "A27~49, A72~84 → A2게이트",
-        "A50~71, B93~104 → A3게이트",
-        "B1~10, B79~92, B105~114 → B1게이트",
-        "B11~32, B66~78 → B2게이트",
-        "B33~65 → B3게이트"
-    ]
-
-};
-
 window.onload = function(){
 
     showRegions();
@@ -35,32 +6,36 @@ window.onload = function(){
 
 function showRegions(){
 
-    let html = `
+    let html = 
     <div class="buttonGrid2">
-    `;
+    ;
 
     Object.keys(apartmentData)
     .forEach(region=>{
 
-        html += `
-        <button onclick="showApartments('${region}')">
+        html += 
+        <button
+        onclick="showApartments('${region}')">
+
         ${region}
+
         </button>
-        `;
+        ;
 
     });
 
-    html += `
+    html += 
     </div>
-    `;
+    ;
 
-    document.getElementById("screen").innerHTML = html;
+    document.getElementById("screen")
+    .innerHTML = html;
 
 }
 
 function showApartments(region){
 
-    let html = `
+    let html = 
 
     <button
     class="navBtn"
@@ -76,12 +51,12 @@ function showApartments(region){
 
     <div class="buttonGrid3">
 
-    `;
+    ;
 
     Object.keys(apartmentData[region])
     .forEach(apartment=>{
 
-        html += `
+        html += 
         <button
         onclick="showDongs(
         '${region}',
@@ -91,31 +66,22 @@ function showApartments(region){
         ${apartment}
 
         </button>
-        `;
+        ;
 
     });
 
-    html += `
+    html += 
     </div>
-    `;
+    ;
 
-    document.getElementById("screen").innerHTML = html;
+    document.getElementById("screen")
+    .innerHTML = html;
 
 }
 
 function showDongs(region, apartment){
 
-    const aptData = apartmentData[region][apartment];
-
-    if(aptData.lines){
-
-        showOfficetel(region, apartment);
-
-        return;
-
-    }
-
-    let html = `
+    let html = 
 
     <button
     class="navBtn"
@@ -125,61 +91,34 @@ function showDongs(region, apartment){
 
     </button>
 
-    <div class="path">
+  <div class="path">
 
-    ${region}
-    >
-    ${apartment}
+${region}
+>
+${apartment}
 
-    </div>
+</div>
 
-    <div class="passwordBox">
+<div class="passwordBox">
 
-    <h3>
+<h3>
 
-    공동비밀번호 :
-    ${getCommonPassword(region, apartment)}
+공동비밀번호 :
+${getCommonPassword(region, apartment)}
 
-    </h3>
+</h3>
 
-    `;
+</div>
 
-    if(gateInfo[apartment]){
+<div class="buttonGrid3">
+    ;
 
-        html += `
-
-        <div class="lineBox">
-
-        <h4>게이트 안내</h4>
-
-        `;
-
-        gateInfo[apartment].forEach(info=>{
-
-            html += `
-            <div>${info}</div>
-            `;
-
-        });
-
-        html += `
-        </div>
-        `;
-
-    }
-
-    html += `
-
-    </div>
-
-    <div class="buttonGrid3">
-
-    `;
-
-    Object.keys(apartmentData[region][apartment])
+    Object.keys(
+        apartmentData[region][apartment]
+    )
     .forEach(dong=>{
 
-        html += `
+        html += 
         <button
         onclick="showPassword(
         '${region}',
@@ -190,86 +129,16 @@ function showDongs(region, apartment){
         ${dong}
 
         </button>
-        `;
+        ;
 
     });
 
-    html += `
+    html += 
     </div>
-    `;
+    ;
 
-    document.getElementById("screen").innerHTML = html;
-
-}
-
-function showOfficetel(region, apartment){
-
-    const password =
-    apartmentData[region][apartment]
-    .lines["-"][0];
-
-    let html = `
-
-    <button
-    class="navBtn"
-    onclick="showApartments('${region}')">
-
-    ← 뒤로
-
-    </button>
-
-    <div class="path">
-
-    ${region}
-    >
-    길건너오피
-    >
-    ${apartment}
-
-    </div>
-
-    <div class="passwordBox">
-
-    <h2>${apartment}</h2>
-
-    <h3>
-
-    공동비밀번호 :
-    ${password}
-
-    </h3>
-
-    `;
-
-    if(gateInfo[apartment]){
-
-        html += `
-
-        <div class="lineBox">
-
-        <h4>게이트 안내</h4>
-
-        `;
-
-        gateInfo[apartment].forEach(info=>{
-
-            html += `
-            <div>${info}</div>
-            `;
-
-        });
-
-        html += `
-        </div>
-        `;
-
-    }
-
-    html += `
-    </div>
-    `;
-
-    document.getElementById("screen").innerHTML = html;
+    document.getElementById("screen")
+    .innerHTML = html;
 
 }
 
@@ -282,7 +151,7 @@ function showPassword(
     const data =
     apartmentData[region][apartment][dong];
 
-    let html = `
+    let html = 
 
     <button
     class="navBtn"
@@ -318,12 +187,12 @@ function showPassword(
 
     </p>
 
-    `;
+    ;
 
     Object.entries(data.lines)
     .forEach(([line,passwords])=>{
 
-        html += `
+        html += 
 
         <div class="lineBox">
 
@@ -331,29 +200,30 @@ function showPassword(
         ${line}
         </h4>
 
-        `;
+        ;
 
         passwords.forEach(password=>{
 
-            html += `
+            html += 
             <div>
             ${password}
             </div>
-            `;
+            ;
 
         });
 
-        html += `
+        html += 
         </div>
-        `;
+        ;
 
     });
 
-    html += `
+    html += 
     </div>
-    `;
+    ;
 
-    document.getElementById("screen").innerHTML = html;
+    document.getElementById("screen")
+    .innerHTML = html;
 
 }
 
