@@ -105,6 +105,9 @@ function showApartments(region){
 
 function showDongs(region, apartment){
 
+    console.log("showDongs", region, apartment);
+    console.log(apartmentData[region][apartment]);
+
     const aptData = apartmentData[region][apartment];
 
     if(aptData.lines){
@@ -114,6 +117,8 @@ function showDongs(region, apartment){
         return;
 
     }
+
+...
 
     let html = `
 
