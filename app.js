@@ -111,26 +111,30 @@ ${apartment}
 
 </div>
 
-if(
-    apartment !== "길건너오피"
-){
+`;
+
+    if(
+        apartment !== "길건너오피"
+    ){
+
+        html += `
+
+        <div class="passwordBox">
+
+        <h3>
+
+        공동비밀번호 :
+        ${getCommonPassword(region, apartment)}
+
+        </h3>
+
+        </div>
+
+        `;
+
+    }
 
     html += `
-
-    <div class="passwordBox">
-
-    <h3>
-
-    공동비밀번호 :
-    ${getCommonPassword(region, apartment)}
-
-    </h3>
-
-    </div>
-
-    `;
-
-}
 
 <div class="buttonGrid3">
 
