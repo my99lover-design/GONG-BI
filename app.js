@@ -6,27 +6,27 @@ window.onload = function(){
 
 function showRegions(){
 
-    let html = 
+    let html = `
     <div class="buttonGrid2">
-    ;
+    `;
 
     Object.keys(apartmentData)
     .forEach(region=>{
 
-        html += 
+        html += `
         <button
         onclick="showApartments('${region}')">
 
         ${region}
 
         </button>
-        ;
+        `;
 
     });
 
-    html += 
+    html += `
     </div>
-    ;
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -35,7 +35,7 @@ function showRegions(){
 
 function showApartments(region){
 
-    let html = 
+    let html = `
 
     <button
     class="navBtn"
@@ -51,12 +51,12 @@ function showApartments(region){
 
     <div class="buttonGrid3">
 
-    ;
+    `;
 
     Object.keys(apartmentData[region])
     .forEach(apartment=>{
 
-        html += 
+        html += `
         <button
         onclick="showDongs(
         '${region}',
@@ -66,13 +66,13 @@ function showApartments(region){
         ${apartment}
 
         </button>
-        ;
+        `;
 
     });
 
-    html += 
+    html += `
     </div>
-    ;
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -81,7 +81,7 @@ function showApartments(region){
 
 function showDongs(region, apartment){
 
-    let html = 
+    let html = `
 
     <button
     class="navBtn"
@@ -91,7 +91,7 @@ function showDongs(region, apartment){
 
     </button>
 
-  <div class="path">
+    <div class="path">
 
 ${region}
 >
@@ -111,14 +111,15 @@ ${getCommonPassword(region, apartment)}
 </div>
 
 <div class="buttonGrid3">
-    ;
+
+    `;
 
     Object.keys(
         apartmentData[region][apartment]
     )
     .forEach(dong=>{
 
-        html += 
+        html += `
         <button
         onclick="showPassword(
         '${region}',
@@ -129,13 +130,13 @@ ${getCommonPassword(region, apartment)}
         ${dong}
 
         </button>
-        ;
+        `;
 
     });
 
-    html += 
+    html += `
     </div>
-    ;
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
@@ -151,7 +152,7 @@ function showPassword(
     const data =
     apartmentData[region][apartment][dong];
 
-    let html = 
+    let html = `
 
     <button
     class="navBtn"
@@ -187,40 +188,40 @@ function showPassword(
 
     </p>
 
-    ;
+    `;
 
     Object.entries(data.lines)
     .forEach(([line,passwords])=>{
 
-        html += 
+        html += `
 
         <div class="lineBox">
 
         <h4>
-        ${line}
+        ${line}라인
         </h4>
 
-        ;
+        `;
 
         passwords.forEach(password=>{
 
-            html += 
+            html += `
             <div>
             ${password}
             </div>
-            ;
+            `;
 
         });
 
-        html += 
+        html += `
         </div>
-        ;
+        `;
 
     });
 
-    html += 
+    html += `
     </div>
-    ;
+    `;
 
     document.getElementById("screen")
     .innerHTML = html;
