@@ -115,8 +115,6 @@ function showDongs(region, apartment){
 
     }
 
-...
-
     let html = `
 
     <button
