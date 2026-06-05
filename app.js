@@ -105,9 +105,6 @@ function showApartments(region){
 
 function showDongs(region, apartment){
 
-    console.log("showDongs", region, apartment);
-    console.log(apartmentData[region][apartment]);
-
     const aptData = apartmentData[region][apartment];
 
     if(aptData.lines){
