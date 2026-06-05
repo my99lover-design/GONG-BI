@@ -111,16 +111,26 @@ ${apartment}
 
 </div>
 
-<div class="passwordBox">
+if(
+    apartment !== "길건너오피"
+){
 
-<h3>
+    html += `
 
-공동비밀번호 :
-${getCommonPassword(region, apartment)}
+    <div class="passwordBox">
 
-</h3>
+    <h3>
 
-</div>
+    공동비밀번호 :
+    ${getCommonPassword(region, apartment)}
+
+    </h3>
+
+    </div>
+
+    `;
+
+}
 
 <div class="buttonGrid3">
 
@@ -215,17 +225,22 @@ onclick="showDongs(
     `;
 
     Object.entries(data.lines)
-    .forEach(([line,passwords])=>{
+.forEach(([line,passwords])=>{
+
+    html += `
+
+    <div class="lineBox">
+    `;
+
+    if(line !== "-"){
 
         html += `
-
-        <div class="lineBox">
-
         <h4>
         ${line}라인
         </h4>
-
         `;
+
+    }
 
         passwords.forEach(password=>{
 
