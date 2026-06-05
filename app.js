@@ -236,37 +236,41 @@ function showPassword(
     }
 
     Object.entries(data.lines)
-    .forEach(([line,passwords])=>{
+.forEach(([line,passwords])=>{
+
+    html += `
+    <div class="lineBox">
+    `;
+
+    if(
+        line &&
+        line !== "-" &&
+        line !== "undefined"
+    ){
 
         html += `
-        <div class="lineBox">
+        <h4>
+        ${line}라인
+        </h4>
         `;
 
-        if(line !== "-"){
+    }
 
-            html += `
-            <h4>
-            ${line}라인
-            </h4>
-            `;
-
-        }
-
-        passwords.forEach(password=>{
-
-            html += `
-            <div>
-            ${password}
-            </div>
-            `;
-
-        });
+    passwords.forEach(password=>{
 
         html += `
+        <div>
+        ${password}
         </div>
         `;
 
     });
+
+    html += `
+    </div>
+    `;
+
+});
 
     html += `
     </div>
