@@ -85,37 +85,34 @@ function showDongs(region, apartment){
 
     <div class="topButtons">
 
-<button
-class="navBtn"
-onclick="showRegions()">
+    <button
+    class="navBtn"
+    onclick="showRegions()">
 
-🏠 홈
+    🏠 홈
 
-</button>
+    </button>
 
-<button
-class="navBtn"
-onclick="showApartments('${region}')">
+    <button
+    class="navBtn"
+    onclick="showApartments('${region}')">
 
-← 뒤로
+    ← 뒤로
 
-</button>
+    </button>
 
-</div>
+    </div>
 
     <div class="path">
 
-${region}
->
-${apartment}
+    ${region}
+    >
+    ${apartment}
 
-</div>
+    </div>
+    `;
 
-`;
-
-    if(
-        apartment !== "길건너오피"
-    ){
+    if(apartment !== "길건너오피"){
 
         html += `
 
@@ -136,7 +133,7 @@ ${apartment}
 
     html += `
 
-<div class="buttonGrid3">
+    <div class="buttonGrid3">
 
     `;
 
