@@ -110,9 +110,13 @@ function showDongs(region, apartment){
     ${apartment}
 
     </div>
+
     `;
 
-    if(apartment !== "길건너오피"){
+    const commonPassword =
+    getCommonPassword(region, apartment);
+
+    if(commonPassword){
 
         html += `
 
@@ -121,7 +125,7 @@ function showDongs(region, apartment){
         <h3>
 
         공동비밀번호 :
-        ${getCommonPassword(region, apartment)}
+        ${commonPassword}
 
         </h3>
 
@@ -179,26 +183,26 @@ function showPassword(
 
     <div class="topButtons">
 
-<button
-class="navBtn"
-onclick="showRegions()">
+    <button
+    class="navBtn"
+    onclick="showRegions()">
 
-🏠 홈
+    🏠 홈
 
-</button>
+    </button>
 
-<button
-class="navBtn"
-onclick="showDongs(
-'${region}',
-'${apartment}'
-)">
+    <button
+    class="navBtn"
+    onclick="showDongs(
+    '${region}',
+    '${apartment}'
+    )">
 
-← 뒤로
+    ← 뒤로
 
-</button>
+    </button>
 
-</div>
+    </div>
 
     <div class="path">
 
@@ -216,42 +220,37 @@ onclick="showDongs(
 
     <h3>${dong}</h3>
 
+    `;
+
     if(data.common){
 
-    html += `
-    <p>
-    공동비밀번호 :
-    ${data.common}
-    </p>
-    `;
-
-}
-
-    `;
-
-    Object.entries(data.lines)
-.forEach(([line,passwords])=>{
-
-    html += `
-
-    <div class="lineBox">
-    `;
-
-    if(line !== "-"){
-
         html += `
-       if(line !== "-"){
+        <p>
 
-    html += `
-    <h4>
-    ${line}라인
-    </h4>
-    `;
+        공동비밀번호 :
+        ${data.common}
 
-}
+        </p>
         `;
 
     }
+
+    Object.entries(data.lines)
+    .forEach(([line,passwords])=>{
+
+        html += `
+        <div class="lineBox">
+        `;
+
+        if(line !== "-"){
+
+            html += `
+            <h4>
+            ${line}라인
+            </h4>
+            `;
+
+        }
 
         passwords.forEach(password=>{
 
@@ -288,10 +287,16 @@ function getCommonPassword(
         apartmentData[region][apartment]
     )[0];
 
-    return apartmentData
+    const data =
+    apartmentData
     [region]
     [apartment]
-    [firstDong]
-    .common;
+    [firstDong];
+
+    if(!data){
+        return "";
+    }
+
+    return data.common || "";
 
 }
