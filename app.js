@@ -264,7 +264,7 @@ function showPassword(
 
     }
 
-    if(gateInfo[apartment]){
+    if(gateInfo[dong]){
 
     html += `
     <div class="lineBox">
@@ -272,7 +272,7 @@ function showPassword(
     <h4>게이트 안내</h4>
     `;
 
-    gateInfo[apartment].forEach(info=>{
+    gateInfo[dong].forEach(info=>{
 
         html += `
         <div>${info}</div>
@@ -283,7 +283,6 @@ function showPassword(
     html += `
     </div>
     `;
-
 }
 
     Object.entries(data.lines)
