@@ -4676,7 +4676,9 @@ const apartmentData = {
                 "common": "##8080",
                 "lines": {
                     "1,2": [],
-                    "3,4": []
+                    "3,4": [
+                        "#1203#1031#"
+                    ]
                 }
             },
             "406": {
@@ -6642,7 +6644,9 @@ const apartmentData = {
             "210": {
                 "common": "##5092",
                 "lines": {
-                    "undefined": []
+                    "undefined": [
+                        "#803#1234#"
+                    ]
                 }
             },
             "211": {
@@ -7502,7 +7506,7 @@ const apartmentData = {
             "노블": {
                 "lines": {
                     "undefined": [
-                        "$4801#"
+                        "#4801#"
                     ]
                 }
             },
